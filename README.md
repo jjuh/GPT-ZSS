@@ -2,7 +2,7 @@
 [![PyTorch](https://img.shields.io/badge/PyTorch-1.9.0-%23EE4C2C.svg?style=&logo=PyTorch&logoColor=white)](https://pytorch.org/)
 [![Python](https://img.shields.io/badge/Python-3.7%20|%203.8%20|%203.9-blue.svg?style=&logo=python&logoColor=ffdd54)](https://www.python.org/downloads/)
 
-**[🏠[Project page]](https://henghuiding.github.io/PADing/)** &emsp; **[📄[arXiv]](https://arxiv.org/abs/2306.11087)**  &emsp; **[📄[PDF]](https://openaccess.thecvf.com/content/CVPR2023/papers/He_Primitive_Generation_and_Semantic-Related_Alignment_for_Universal_Zero-Shot_Segmentation_CVPR_2023_paper.pdf)**
+**[🏠[Project page]](https://henghuiding.github.io/GPTSegNetZero/)** &emsp; **[📄[arXiv]](https://arxiv.org/abs/2306.11087)**  &emsp; **[📄[PDF]](https://openaccess.thecvf.com/content/CVPR2023/papers/He_Primitive_Generation_and_Semantic-Related_Alignment_for_Universal_Zero-Shot_Segmentation_CVPR_2023_paper.pdf)**
 
 This repository contains code for **CVPR2023** paper:
 > [Primitive Generation and Semantic-related Alignment for Universal Zero-Shot Segmentation](https://openaccess.thecvf.com/content/CVPR2023/papers/He_Primitive_Generation_and_Semantic-Related_Alignment_for_Universal_Zero-Shot_Segmentation_CVPR_2023_paper.pdf)  
@@ -16,7 +16,7 @@ This repository contains code for **CVPR2023** paper:
 The code is tested under CUDA 11.2, Pytorch 1.9.0 and Detectron2 0.6.
 
 1. Install [Detectron2](https://github.com/facebookresearch/detectron2) following the [manual](https://detectron2.readthedocs.io/en/latest/)
-2. Run `sh make.sh` under `PADing/modeling/pixel_decoder/ops`
+2. Run `sh make.sh` under `GPTSegNetZero/modeling/pixel_decoder/ops`
 (Note: 1-2 steps you can also follow the installation process of [Mask2Former](https://github.com/facebookresearch/Mask2Former))
 3. Install other required packages: `pip install -r requirements.txt`
 4. Prepare the dataset following `datasets/README.md`
@@ -25,7 +25,7 @@ The code is tested under CUDA 11.2, Pytorch 1.9.0 and Detectron2 0.6.
 
 ```bash
 CUDA_VISIBLE_DEVICES=0 python train_net.py \
-    --config-file configs/panoptic-segmentation/PADing.yaml \
+    --config-file configs/panoptic-segmentation/GPTSegNetZero.yaml \
     --num-gpus 1 --eval-only \
     MODEL.WEIGHTS [path_to_weights] \
     OUTPUT_DIR [output_dir]
@@ -41,9 +41,9 @@ python train_net_pretrain.py --config-file configs/panoptic-segmentation/pretrai
 python tools/preprocess_pretrained_weight.py --task_name panoptic --input_file panoptic_pretrain/model_final.pth
 ```
 
-Then train PADing and finetune the last class embedding layer of the trained mask2former model:
+Then train GPTSegNetZero and finetune the last class embedding layer of the trained mask2former model:
 ```bash
-CUDA_VISIBLE_DEVICES=0 python train_net.py  --config-file configs/panoptic-segmentation/PADing.yaml --num-gpus 1 MODEL.WEIGHTS pretrained_weight_panoptic.pth
+CUDA_VISIBLE_DEVICES=0 python train_net.py  --config-file configs/panoptic-segmentation/GPTSegNetZero.yaml --num-gpus 1 MODEL.WEIGHTS pretrained_weight_panoptic.pth
 ```
 
 
@@ -51,7 +51,7 @@ CUDA_VISIBLE_DEVICES=0 python train_net.py  --config-file configs/panoptic-segme
 
 Download pretrained weights [here](https://drive.google.com/drive/folders/1ynhW1vc_KpLQC_O1MrSuRt4dn8ZYTwa4?usp=sharing).
 
-Download final trained PADing weights for inference [here](https://drive.google.com/drive/folders/1QCD-0MXtGOJQdexjelOlOlx7MvUphaEZ?usp=sharing).
+Download final trained GPTSegNetZero  weights for inference [here](https://drive.google.com/drive/folders/1QCD-0MXtGOJQdexjelOlOlx7MvUphaEZ?usp=sharing).
 
 <table>
     <tr>
@@ -84,10 +84,10 @@ Note: We reorganize code and the performances are slightly different from the pa
 This project is based on [Zegformer](https://github.com/dingjiansw101/ZegFormer), [Mask2Former](https://github.com/facebookresearch/Mask2Former). Many thanks to the authors for their great works!
 
 ## BibTeX
-Please consider to cite PADing if it helps your research.
+Please consider to cite GPTSegNetZero  if it helps your research.
 
 ```latex
-@inproceedings{PADing,
+@inproceedings{GPTSegNetZero ,
   title={Primitive Generation and Semantic-Related Alignment for Universal Zero-Shot Segmentation},
   author={He, Shuting and Ding, Henghui and Jiang, Wei},
   booktitle={CVPR},
