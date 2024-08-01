@@ -40,15 +40,5 @@ CUDA_VISIBLE_DEVICES=0 python train_net.py  --config-file configs/panoptic-segme
 
 This project is based on [Zegformer](https://github.com/dingjiansw101/ZegFormer), [Mask2Former](https://github.com/facebookresearch/Mask2Former). Many thanks to the authors for their great works!
 
-## BibTeX
-Please consider to cite GPTSegNetZero  if it helps your research.
 
-```latex
-@inproceedings{GPTSegNetZero ,
-  title={Primitive Generation and Semantic-Related Alignment for Universal Zero-Shot Segmentation},
-  author={He, Shuting and Ding, Henghui and Jiang, Wei},
-  booktitle={CVPR},
-  year={2023}
-}
-```
 
