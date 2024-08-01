@@ -1,4 +1,4 @@
-# Primitive Generation and Semantic-related Alignment for Universal Zero-Shot Segmentation
+# A unified zero-shot segmentation framework based on GPT-generated features and relationship alignment
 [![PyTorch](https://img.shields.io/badge/PyTorch-1.9.0-%23EE4C2C.svg?style=&logo=PyTorch&logoColor=white)](https://pytorch.org/)
 [![Python](https://img.shields.io/badge/Python-3.7%20|%203.8%20|%203.9-blue.svg?style=&logo=python&logoColor=ffdd54)](https://www.python.org/downloads/)
 
