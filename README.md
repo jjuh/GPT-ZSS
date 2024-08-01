@@ -2,15 +2,6 @@
 [![PyTorch](https://img.shields.io/badge/PyTorch-1.9.0-%23EE4C2C.svg?style=&logo=PyTorch&logoColor=white)](https://pytorch.org/)
 [![Python](https://img.shields.io/badge/Python-3.7%20|%203.8%20|%203.9-blue.svg?style=&logo=python&logoColor=ffdd54)](https://www.python.org/downloads/)
 
-**[🏠[Project page]](https://henghuiding.github.io/GPTSegNetZero/)** &emsp; **[📄[arXiv]](https://arxiv.org/abs/2306.11087)**  &emsp; **[📄[PDF]](https://openaccess.thecvf.com/content/CVPR2023/papers/He_Primitive_Generation_and_Semantic-Related_Alignment_for_Universal_Zero-Shot_Segmentation_CVPR_2023_paper.pdf)**
-
-This repository contains code for **CVPR2023** paper:
-> [Primitive Generation and Semantic-related Alignment for Universal Zero-Shot Segmentation](https://openaccess.thecvf.com/content/CVPR2023/papers/He_Primitive_Generation_and_Semantic-Related_Alignment_for_Universal_Zero-Shot_Segmentation_CVPR_2023_paper.pdf)  
-> Shuting He, Henghui Ding, Wei Jiang  
-
-![framework](imgs/framework.png)
-
-
 ## Installation:
 
 The code is tested under CUDA 11.2, Pytorch 1.9.0 and Detectron2 0.6.
