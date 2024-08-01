@@ -36,40 +36,6 @@ Then train GPTSegNetZero and finetune the last class embedding layer of the trai
 ```bash
 CUDA_VISIBLE_DEVICES=0 python train_net.py  --config-file configs/panoptic-segmentation/GPTSegNetZero.yaml --num-gpus 1 MODEL.WEIGHTS pretrained_weight_panoptic.pth
 ```
-
-
-## Trained Models and logs
-
-Download pretrained weights [here](https://drive.google.com/drive/folders/1ynhW1vc_KpLQC_O1MrSuRt4dn8ZYTwa4?usp=sharing).
-
-Download final trained GPTSegNetZero  weights for inference [here](https://drive.google.com/drive/folders/1QCD-0MXtGOJQdexjelOlOlx7MvUphaEZ?usp=sharing).
-
-<table>
-    <tr>
-        <th style='text-align:center;' >Semantic-segmentation</th>
-        <th style='text-align:center;' >Instance-segmentation</th>
-        <th style='text-align:center;' >Panoptic-segmentation</th>
-    </tr>
-    <tr>
-        <td style='text-align:center;'>Seen | Unseen (IoU)</td>
-        <td style='text-align:center;'>Seen | Unseen (mAP)</td>
-        <td style='text-align:center;'>PQ<sup>s</sup>, SQ<sup>s</sup>, RQ<sup>s</sup> | PQ<sup>u</sup>,SQ<sup>u</sup>,RQ<sup>u</sup></td>
-    </tr>
-    <tr>
-        <td style='text-align:center;'>40.6 | 26.4</td>
-        <td style='text-align:center;'>53.1 | 8.5</td>
-        <td style='text-align:center;'>37.7/79.0/44.8 | 14.4/75.3/17.4</td>
-    </tr>
-    <tr>
-        <td style='text-align:center;'>
-          <a href='https://drive.google.com/file/d/1hNthRsp7dSY4x51aRHAPK_QQULGMGdeL/view?usp=sharing'>model</a> | <a href='https://drive.google.com/file/d/1FqH76rA_Lnl_P9WTDbX56d5FJzcS0hmY/view?usp=sharing'>log</a> </td>
-        <td style='text-align:center;'><a href='https://drive.google.com/file/d/1dw-KQS8MxIPpqGxQUeuPZjTeVM_2fqld/view?usp=sharing'>model</a> | <a href='https://drive.google.com/file/d/1aG4VQtJIaDRG5FAI5BBJ8ehppA3fXdGd/view?usp=sharing'>log</a></td>
-        <td style='text-align:center;'><a href='https://drive.google.com/file/d/1GTXQvKnSDG0QQHFkardlYwWlQPTX1f9A/view?usp=sharing'>model</a> | <a href='https://drive.google.com/file/d/1T42kCPbEP0fNa0bE4vk0TxJDRHQMuwuu/view?usp=sharing'>log</a></td>
-    </tr>
-</table>
-
-Note: We reorganize code and the performances are slightly different from the paper's.
-
 ## Acknowledgement
 
 This project is based on [Zegformer](https://github.com/dingjiansw101/ZegFormer), [Mask2Former](https://github.com/facebookresearch/Mask2Former). Many thanks to the authors for their great works!
